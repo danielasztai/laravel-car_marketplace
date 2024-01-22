@@ -16,8 +16,15 @@ class ContactController extends Controller
         $formData = $request->validate([
             'name' => 'required',
             'email' => 'required',
-            'message' => 'required'
+            'message' => 'required',
+            'user_id' => 'nullable'
         ]);
+
+        if (auth()->check()) {
+            $formData['user_id'] = auth()->id();
+        } else {
+            $formData['user_id'] = null;
+        }
 
         Contact::create($formData);
 

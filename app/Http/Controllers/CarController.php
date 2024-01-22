@@ -87,7 +87,7 @@ class CarController extends Controller
         
         $car->update($formFields);
 
-        return back()->with('message', 'Car updated successfully!');
+        return redirect('/cars/manage')->with('message', 'Car updated successfully!');
     }
 
     public function destroy(Car $car) {
