@@ -10,7 +10,7 @@ class CarController extends Controller
 {
     public function index() {
         return view('cars.index', [
-            'cars' => Car::latest()->filter(request(['brand', 'price-from', 'price-upto', 'prod_year-from', 'prod_year-upto', 'km-from', 'km-upto', 'power-from', 'power-upto', 'type', 'fuel', 'gearbox']))->get()
+            'cars' => Car::latest()->filter(request(['brand', 'price-from', 'price-upto', 'prod_year-from', 'prod_year-upto', 'km-from', 'km-upto', 'power-from', 'power-upto', 'type', 'fuel', 'gearbox']))->paginate(6)
         ]);
     }
 

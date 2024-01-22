@@ -74,10 +74,10 @@
     </form>
     @foreach($cars as $car)
     <a href="/cars/{{$car->id}}">
-        <div class="flex justify-center">
+        <div class="flex justify-center h-2/4">
             <div class="bg-gray-200 w-2/6 mt-12 gap-x-6">
                 <div>
-                    <img src="{{ asset('storage/' . $car->image) }}" class="w-full max-h-96 object-contain">
+                    <img src="{{ asset('storage/' . $car->image) }}" class="w-full max-h-60 object-contain">
                 </div>
                 <div>
                     <div class="flex gap-12 p-2">
@@ -102,4 +102,9 @@
         </div>
     </a>
     @endforeach
+
+    <div class="flex justify-center mt-6">
+        {{ $cars->links() }}
+    </div>
+
 </x-layout>
