@@ -92,6 +92,6 @@ class CarController extends Controller
 
     public function destroy(Car $car) {
         $car->delete();
-        return redirect('/')->with('message', 'Car deleted successfully!');
+        return redirect('/cars/manage')->with('message', 'Car deleted successfully!');
     }
 }
