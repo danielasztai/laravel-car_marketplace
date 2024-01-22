@@ -35,6 +35,9 @@ Route::get('cars/manage', [CarController::class, 'manage'])->middleware('auth');
 // Showing car edit form
 Route::get('/cars/edit/{car}', [CarController::class, 'edit'])->middleware('auth');
 
+// Updating car
+Route::post('cars/update/{car}', [CarController::class, 'update'])->middleware('auth');
+
 // Delete car
 Route::post('cars/delete/{car}', [CarController::class, 'destroy'])->middleware('auth');
 

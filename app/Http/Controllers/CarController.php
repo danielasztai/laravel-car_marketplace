@@ -60,6 +60,35 @@ class CarController extends Controller
         ]);
     }
 
+    public function update(Request $request, Car $car) {
+        if($car->user_id !== auth()->id()) {
+            abort(403, 'Unauthorized Action');
+        }
+
+        $formFields = $request->validate([
+            'name' => 'required',
+            'brand' => 'required',
+            'description' => 'required',
+            'price' => 'required',
+            'prod_year' => 'required',
+            'km' => 'required',
+            'power' => 'required',
+            'type' => 'required',
+            'fuel' => 'required',
+            'gearbox' => 'required',
+            'mot' => 'required',
+            'image' => 'nullable'
+        ]);
+
+        if ($formFields['image'] ?? null) {
+            $formFields['image'] = $request->file('image')->store('images', 'public');
+        }
+        
+        $car->update($formFields);
+
+        return back()->with('message', 'Car updated successfully!');
+    }
+
     public function destroy(Car $car) {
         $car->delete();
         return redirect('/')->with('message', 'Car deleted successfully!');

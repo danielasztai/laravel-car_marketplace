@@ -1,6 +1,6 @@
 <x-layout>
     <div class="flex justify-center mt-6">
-        <form action="/cars" method="POST" class="flex flex-col items-start gap-y-4" enctype="multipart/form-data">
+        <form action="/cars/update/{{$car->id}}" method="POST" class="flex flex-col items-start gap-y-4" enctype="multipart/form-data">
             @csrf
             <div>
                 <label for="name">Name the car you want to sell:</label><br>
