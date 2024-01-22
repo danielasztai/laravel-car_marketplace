@@ -2,7 +2,7 @@
     <div class="flex flex-col items-center gap-12">
         <div class="flex-col bg-gray-200 w-1/2 mt-12 gap-x-6">
             <div class="flex justify-center">
-                <img src="{{ asset('storage/' . $car->image) }}" class="h-full">
+                <img src="{{ asset('storage/' . $car->image) }}" class="max-h-96">
             </div>
             <div>
                 <div class="flex gap-12 p-2">
