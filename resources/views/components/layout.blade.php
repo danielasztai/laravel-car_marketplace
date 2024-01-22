@@ -11,7 +11,10 @@
 </head>
 <body class="flex flex-col justify-between min-h-screen">
     <nav class="bg-white border-gray-200 dark:bg-gray-900">
-        <div class="flex items-center justify-center">
+        <div class="absolute left-6 top-6 text-2xl text-orange-600 font-semibold">
+            <a href="/"><i class="fa-solid fa-car"></i> Car-Marketplace</a>
+        </div>
+            <div class="flex items-center justify-center">
             <ul class="flex justify-center items-center gap-20 text-xl text-white h-20">
                 <li class="hover:text-orange-600"><a href="/">Home</a></li>
                 <li class="hover:text-orange-600"><a href="/cars">Buy Cars</a></li>
@@ -32,7 +35,7 @@
         {{ $slot }}
     <footer {{$attributes->merge(['class' => 'bg-white border-gray-200 dark:bg-gray-900 text-white h-1/8 w-full p-2'])}}>
         <div class="flex flex-col items-end mr-4">
-            <p>©2024 Car Marketplace</p>
+            <p>©{{date('Y')}} Car Marketplace</p>
             <p>carmarketplace@bestcars.com</p>
             <p>0123 456 789</p>
         </div>
