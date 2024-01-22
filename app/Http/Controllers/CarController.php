@@ -56,7 +56,8 @@ class CarController extends Controller
 
     public function edit(Car $car) {
         return view('cars.edit', [
-            'car' => $car
+            'car' => $car,
+            'cars' => Car::all()
         ]);
     }
 

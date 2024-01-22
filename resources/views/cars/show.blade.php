@@ -1,5 +1,6 @@
 <x-layout>
     <div class="flex flex-col items-center gap-12">
+        <a href="./" class="absolute left-96 top-32 text-xl">🠄Back</a>
         <div class="flex-col bg-gray-200 w-1/2 mt-12 gap-x-6">
             <div class="flex justify-center">
                 <img src="{{ asset('storage/' . $car->image) }}" class="max-h-96">

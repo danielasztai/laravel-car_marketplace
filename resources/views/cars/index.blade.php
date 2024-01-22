@@ -1,5 +1,6 @@
 <x-layout class="mt-16">
     <form action="" method="" class="flex justify-center gap-x-4 mt-6">
+        @csrf
         <div class="flex flex-col">
             <label for="brand">Brand:</label>
             <select name="brand" id="brand" class="bg-gray-400">

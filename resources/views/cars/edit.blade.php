@@ -1,6 +1,6 @@
 <x-layout>
     <div class="flex justify-center mt-6">
-        <form action="/cars/update/{{$car->id}}" method="POST" class="flex flex-col items-start gap-y-4" enctype="multipart/form-data">
+        <form action="/cars/update/{{$car->id}}" method="POST" class="flex flex-col items-around gap-y-4" enctype="multipart/form-data">
             @csrf
             <div>
                 <label for="name">Name the car you want to sell:</label><br>
@@ -13,7 +13,7 @@
             <div>
                 <label for="brand">Brand:</label>
                 <select name="brand" id="brand" class="bg-gray-400">
-                    <option value=""></option>
+                    <option value="">Select Brand</option>
                     <option value="alfa romeo">Alfa Romeo</option>
                     <option value="bmw">BMW</option>
                     <option value="ford">Ford</option>
@@ -62,7 +62,7 @@
             <div>
                 <label for="type">Type:</label>
                 <select name="type" id="type" class="bg-gray-400">
-                    <option value=""></option>
+                    <option value="">Select Car Type</option>
                     <option value="hatchback">Hatchback</option>
                     <option value="Limousine">Limousine</option>
                     <option value="suv">SUV</option>
@@ -78,7 +78,7 @@
             <div>
                 <label for="fuel">Fuel:</label>
                 <select name="fuel" id="fuel" class="bg-gray-400">
-                    <option value=""></option>
+                    <option value="">Select Fuel Type</option>
                     <option value="benzin">Benzin</option>
                     <option value="diesel">Diesel</option>
                     <option value="electric">Electric</option>
@@ -93,7 +93,7 @@
             <div>
                 <label for="gearbox">Gearbox:</label>
                 <select name="gearbox" id="gearbox" class="bg-gray-400">
-                    <option value=""></option>
+                    <option value="">Select Gearbox</option>
                     <option value="automatic">Automatic</option>
                     <option value="manual">Manual</option>
                 </select>
