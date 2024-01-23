@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CarController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ContactController;
 
 /*
@@ -64,3 +65,12 @@ Route::get('/contact', [ContactController::class, 'contact']);
 
 // Storing contact message
 Route::post('/contact', [ContactController::class, 'storeMessage']);
+
+// Showing list of the users
+Route::get('/admin', [AdminController::class, 'index']);
+
+// Giving admin right to a user
+Route::post('/admin/give/{user}', [AdminController::class, 'give_admin']);
+
+// Taking admin right from a user
+Route::post('/admin/take/{user}', [AdminController::class, 'take_admin']);

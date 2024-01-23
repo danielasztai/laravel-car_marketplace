@@ -19,6 +19,11 @@
                 <li class="hover:text-orange-600"><a href="/">Home</a></li>
                 <li class="hover:text-orange-600"><a href="/cars">Buy Cars</a></li>
                 <li class="hover:text-orange-600"><a href="/cars/new">Add New Car</a></li>
+                @if(auth()->check())
+                    @if(Auth::user()->is_admin === 1)
+                        <li class="hover:text-orange-600"><a href="/admin">Admin</a></li>
+                    @endif
+                @endif
             </ul>
             @if(Auth::check())
             <form action="/logout" method="POST" class="absolute right-12 text-xl text-white hover:text-orange-600">
