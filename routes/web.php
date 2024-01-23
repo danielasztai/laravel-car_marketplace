@@ -67,7 +67,7 @@ Route::get('/contact', [ContactController::class, 'contact']);
 Route::post('/contact', [ContactController::class, 'storeMessage']);
 
 // Showing list of the users
-Route::get('/admin', [AdminController::class, 'index']);
+Route::get('/admin', [AdminController::class, 'index'])->middleware('auth');
 
 // Giving admin right to a user
 Route::post('/admin/give/{user}', [AdminController::class, 'give_admin']);

@@ -17,9 +17,13 @@ class AdminController extends Controller
     }
 
     public function give_admin(User $user) {
-        dd($user->id);
+        User::where('id', $user->id)->update(array('is_admin' => 1));
 
-        // User::where($user->id);
+        return redirect('/admin');
+    }
+
+    public function take_admin(User $user) {
+        User::where('id', $user->id)->update(array('is_admin' => 0));
 
         return redirect('/admin');
     }
