@@ -96,7 +96,7 @@
                     </div>
                     <div class="flex gap-6 items-center p-2">
                         <a href="/favorites"><i class="fa-solid fa-star"></i></a>
-                        <a href="/user/contact" class="p-2 bg-orange-600 rounded-lg text-grey-900 hover:text-white hover:bg-gray-900"><h2>Contact</h2></a>
+                        <a href="/chat" class="p-2 bg-orange-600 rounded-lg text-grey-900 hover:text-white hover:bg-gray-900"><h2>Contact</h2></a>
                     </div>
                 </div>
             </div>

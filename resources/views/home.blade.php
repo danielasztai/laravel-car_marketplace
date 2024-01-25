@@ -1,5 +1,5 @@
 <x-layout class="overflow-hidden">
-    <div class="h-screen">
+    <div class="h-[calc(100vh-17vh)]">
         <div class="flex h-1/2">
             <div class="w-1/2 bg-orange-600 text-center pt-12 text-2xl">
                 <h2>Welcome To Our Marketplace</h2>

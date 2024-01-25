@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CarController;
+use App\Http\Controllers\ChatController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ContactController;
@@ -59,6 +60,9 @@ Route::post('/login', [UserController::class, 'authenticate']);
 
 // Logging user out
 Route::post('/logout', [UserController::class, 'logout'])->middleware('auth');
+
+// Showing chat for the user
+Route::get('/chat', [ChatController::class, 'index']);
 
 // Showing contact form
 Route::get('/contact', [ContactController::class, 'contact']);
