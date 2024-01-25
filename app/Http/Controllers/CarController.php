@@ -48,9 +48,10 @@ class CarController extends Controller
         return redirect('/cars')->with('message', 'You added the car successfully!');
     }
 
-    public function manage() {
+    public function manage(Car $car) {
         return view('cars.manage', [
-            'cars' => Car::all()
+            'cars' => Car::all(),
+            'car' => $car
         ]);
     }
 
